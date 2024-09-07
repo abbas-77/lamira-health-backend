@@ -4,7 +4,7 @@ import { config } from "dotenv";
 config();
 
 export function verifyToken(req, res, next) {
-  console.log(req?.baseUrl);
+ 
 
   const token = req.header("Authorization");
   if (!token) {
@@ -13,7 +13,11 @@ export function verifyToken(req, res, next) {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.SECRET_KEY);
+   
+    const tk = token.split(" ")[1]
+    const decoded = jwt.verify(tk, process.env.SECRET_KEY);
+    
+    
     req.userId = decoded.userId;
     next();
   } catch (error) {
