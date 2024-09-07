@@ -27,7 +27,7 @@ const cowSchema = mongoose.Schema(
       default: null,
     },
     birthDate: {
-      type: String, // "admin" , "user"
+      type: String,
       default: null,
     },
     birthLoc: {
