@@ -5,6 +5,8 @@ import cors from "cors"
 import { verifyToken } from "./middleware/authMiddleware.js"
 import { loginRoutes } from "./router/auth/route.js"
 import { cowRoutes } from "./router/cow/route.js"
+import { vaccineRoutes } from "./router/vaccine/route.js"
+import { drugRoutes } from "./router/drug/route.js"
 
 
 
@@ -23,6 +25,8 @@ app.use(express.urlencoded({extended:true}))
 //Routes
 app.use("/auth", loginRoutes);
 app.use("/cow", cowRoutes);
+app.use("/vaccine", vaccineRoutes);
+app.use("/drug", drugRoutes);
 
 
 //Check and install Python dependencies if needed
