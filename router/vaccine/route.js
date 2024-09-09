@@ -9,4 +9,4 @@ export const vaccineRoutes = express.Router();
 
 vaccineRoutes.get("/getAll", verifyToken , getAllVaccines);
 vaccineRoutes.get("/getcowById/:id", verifyToken , getVaccineById);
-vaccineRoutes.post("/add", verifyToken , addVaccine);
+// vaccineRoutes.post("/add", verifyToken , addVaccine);
