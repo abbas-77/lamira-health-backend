@@ -13,6 +13,7 @@ export const getAllCows = expressAsyncHandler(async (req, res) => {
   const AllCows = [];
   cows.forEach((cow) => {
     const cows = {
+      id:cow?._id,
       plateNumber: cow?.plateNumber,
       profileImg: cow?.profileImg,
       race: cow?.race,
