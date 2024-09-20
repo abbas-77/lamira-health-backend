@@ -12,15 +12,15 @@ const drugSchema = mongoose.Schema(
     },
     DateOfTakingMedicine: {
       type: String,
-      required: [true, "Please add the DateOfTakingMedicine"],
+      default: null,
     },
     userId: {
       type: String,
-      required: [true, "Please add the userId"],
+      default: null,
     },
     cowId: {
       type: String,
-      required: [true, "Please add the cowId"],
+      default: null,
     },
   },
   {

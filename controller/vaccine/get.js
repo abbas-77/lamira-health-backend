@@ -29,3 +29,4 @@ export const getVaccineById = expressAsyncHandler(async (req, res) => {
   const vaccine = await vaccineModel.findOne({ _id: id });
   res.status(200).json(SuccesResponse(vaccine));
 });
+
